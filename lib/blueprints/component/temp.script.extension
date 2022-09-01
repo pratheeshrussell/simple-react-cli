@@ -1,0 +1,14 @@
+{% if filesType.script === 'tsx' %}
+import React from 'react';
+import './{{name | fileNameCase}}.module.css';
+
+function {{name | PascalCase}}() {
+    return (
+      <p class='{{name | kebabCase}}'>Hello from {{name | PascalCase}} component</p>
+    );
+
+}
+
+export default {{name | PascalCase}};
+
+{% endif %}

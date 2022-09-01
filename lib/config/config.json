@@ -1,0 +1,8 @@
+{
+  "filesType": {
+    "spec": "tsx",
+    "script": "tsx",
+    "html": "html",
+    "style": "css"
+  }
+}

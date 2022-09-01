@@ -1,0 +1,48 @@
+{
+  "name": "@pratheeshrussell/simple-react-cli",
+  "version": "0.0.1",
+  "description": "Simple Cli for React Typescript projects",
+  "main": "lib/src.js",
+  "homepage": "https://github.com/pratheeshrussell/simple-react-cli.git",
+  "scripts": {
+    "build": " npm run gulp -- build",
+    "gulp": "gulp",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "react component",
+    "react cli",
+    "react generator"
+  ],
+  "author": "Pratheesh Russell",
+  "license": "MIT",
+  "bin": {
+    "src": "dist/src.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratheeshrussell/simple-react-cli.git"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "command-line-args": "^5.2.0",
+    "command-line-usage": "^6.1.1",
+    "del": "^2.2.0",
+    "fs-extra": "^9.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "lodash": "^4.17.13",
+    "swig": "^1.4.2"
+  },
+  "bugs": {
+    "url": "https://github.com/pratheeshrussell/simple-react-cli/issues"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}

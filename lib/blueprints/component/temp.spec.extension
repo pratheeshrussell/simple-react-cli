@@ -1,0 +1,9 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import {{name | PascalCase}} from './{{name | fileNameCase}}';
+
+test('sample test for {{name | PascalCase}} component', () => {
+  render(<{{name | PascalCase}} />);
+  const linkElement = screen.getByText(/Hello from {{name | PascalCase}} component/i);
+  expect(linkElement).toBeInTheDocument();
+});
