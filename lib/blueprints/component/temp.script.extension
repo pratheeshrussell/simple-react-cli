@@ -4,7 +4,7 @@ import './{{name | fileNameCase}}.module.css';
 
 function {{name | PascalCase}}() {
     return (
-      <p class='{{name | kebabCase}}'>Hello from {{name | PascalCase}} component</p>
+      <p className='{{name | kebabCase}}'>Hello from {{name | PascalCase}} component</p>
     );
 
 }

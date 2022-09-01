@@ -6,10 +6,10 @@ const {{name | fileNameCase }}Slice = createSlice({
     name: '{{name | fileNameCase }}Slice',
     initialState: initial{{name | PascalCase }}State,
     reducers: {
-      increment(state) {
+      increment(state:{[key:string]:any}) {
         state.counter++;
       },
-      decrement(state) {
+      decrement(state:{[key:string]:any}) {
         state.counter--;
       }
     },
