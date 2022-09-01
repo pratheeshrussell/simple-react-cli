@@ -2,7 +2,11 @@
 import React from 'react';
 import './{{name | fileNameCase}}.module.css';
 
-function {{name | PascalCase}}() {
+interface {{name | fileNameCase}}Props extends React.PropsWithChildren {
+  // define expected props here
+};
+
+const {{name | PascalCase}}:React.FC<{{name | fileNameCase}}Props> = (props) => {
     return (
       <p className='{{name | kebabCase}}'>Hello from {{name | PascalCase}} component</p>
     );
