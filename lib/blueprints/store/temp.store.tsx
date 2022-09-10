@@ -1,8 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
-import {{name | fileNameCase }}Reducer from './{{name | fileNameCase }}.slice';
 
-const {{name | fileNameCase }} = configureStore({
-    reducer: { {{name | fileNameCase }}:{{name | fileNameCase }}Reducer },
+const {{(name + ' ' + postfix) | PascalCase }} = configureStore({
+
+    reducer: {
+        // Reducers from other slices and Api's
+        // auth:authReducer,
+        // [AuthApi.reducerPath]:AuthApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>getDefaultMiddleware().concat(
+        // Concat middlewares from api
+        // AuthApi.middleware,
+    ),
 });
-  
-export default {{name | fileNameCase }};
+
+export type {{(name + ' ' + postfix) | PascalCase }}State = ReturnType<typeof {{(name + ' ' + postfix) | PascalCase }}.getState>
+export default {{(name + ' ' + postfix) | PascalCase }};

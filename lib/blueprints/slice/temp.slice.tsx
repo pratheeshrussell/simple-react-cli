@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initial{{name | PascalCase }}State = { counter: 0 };
+const initial{{(name + ' ' + postfix) | PascalCase }}State = { counter: 0 };
 
-const {{name | fileNameCase }}Slice = createSlice({
-    name: '{{name | fileNameCase }}Slice',
-    initialState: initial{{name | PascalCase }}State,
+const {{(name + ' ' + postfix) | PascalCase }} = createSlice({
+    name: '{{(name + ' ' + postfix) | PascalCase }}Slice',
+    initialState: initial{{(name + ' ' + postfix) | PascalCase }}State,
     reducers: {
       increment(state:{[key:string]:any}) {
         state.counter++;
@@ -15,6 +15,9 @@ const {{name | fileNameCase }}Slice = createSlice({
     },
   });
   
-  export const {{name | fileNameCase }}Actions = {{name | fileNameCase }}Slice.actions;
-  
-  export default {{name | fileNameCase }}Slice.reducer;
+  export const {{(name + ' ' + postfix) | PascalCase }}Actions = {{(name + ' ' + postfix) | PascalCase }}.actions;
+  // Use the Actions export to dispatch actions in Components
+  export default {{(name + ' ' + postfix) | PascalCase }}.reducer;
+  // Register the reducer in Store by adding it to the reducers object
+  // import {{(name + ' ' + postfix) | PascalCase }}Reducer from './{{(name + ' ' + postfix) | fileNameCase }}'
+  // {{(name) | camelCase }}:{{(name + ' ' + postfix) | PascalCase }}Reducer,

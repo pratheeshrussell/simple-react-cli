@@ -1,18 +1,20 @@
 {% if filesType.script === 'tsx' %}
 import React from 'react';
-import './{{name | fileNameCase}}.module.css';
+import {{name | PascalCase}}Style from './{{(name + ' ' + postfix) | fileNameCase}}.module.css';
 
-interface {{name | fileNameCase}}Props extends React.PropsWithChildren {
+interface {{(name + ' ' + postfix) | PascalCase}}Props extends React.PropsWithChildren {
   // define expected props here
 };
 
-const {{name | PascalCase}}:React.FC<{{name | fileNameCase}}Props> = (props) => {
+const {{(name + ' ' + postfix) | PascalCase}}:React.FC<{{(name + ' ' + postfix) | PascalCase}}Props> = (props) => {
     return (
-      <p className='{{name | kebabCase}}'>Hello from {{name | PascalCase}} component</p>
+      <React.Fragment>
+        <p className={ {{name | PascalCase}}Style['{{(name + ' ' + postfix) | kebabCase}}'] }>Hello from {{(name + ' ' + postfix) | PascalCase}}</p>
+      </React.Fragment>
     );
 
 }
 
-export default {{name | PascalCase}};
+export default {{(name + ' ' + postfix) | PascalCase}};
 
 {% endif %}

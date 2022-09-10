@@ -1,8 +1,8 @@
-function use{{name | PascalCase}}() {
+function use{{(name + ' ' + postfix) | PascalCase}}() {
   return {
     message:'Hello from use{{name | PascalCase}} hook'
   };
 
 }
 
-export default use{{name | PascalCase}};
+export default use{{(name + ' ' + postfix) | PascalCase}};

@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import {{name | PascalCase}} from './{{name | fileNameCase}}';
+import {{(name + ' ' + postfix) | PascalCase}} from './{{(name + ' ' + postfix) | fileNameCase}}';
 
-test('sample test for {{name | PascalCase}} component', () => {
-  render(<{{name | PascalCase}} />);
-  const linkElement = screen.getByText(/Hello from {{name | PascalCase}} component/i);
+test('sample test for {{(name + ' ' + postfix) | PascalCase}}', () => {
+  render(<{{(name + ' ' + postfix) | PascalCase}} />);
+  const linkElement = screen.getByText(/Hello from {{(name + ' ' + postfix) | PascalCase}}/i);
   expect(linkElement).toBeInTheDocument();
 });
