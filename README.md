@@ -59,12 +59,17 @@ Will get back to this once I learn more about react hooks. For now it will gener
 ```bash
 src-ts --rtk --store storage
 ```
-Will generate a store with a sample slice
+Will generate a store 
 
 ```bash
 src-ts --rtk --slice auth
 ```
-will generate a slice but you must manually add it to the store.   
+will generate a slice but you must manually add it to the store. 
+
+```bash
+src-ts --rtk --api auth
+```
+will generate a sample Query and a Mutation but you must manually add it to the store. 
   
   
 Will add more commands once I learn more about it.
